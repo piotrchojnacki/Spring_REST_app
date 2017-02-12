@@ -1,0 +1,67 @@
+DOCUMENTATION.txt
+
+I.	How to run:
+
+1.	Unzip the project.
+2.	Install JDK and JRE.
+3.	Install 'Spring Tool Suite'.
+4.	Install RestClient on Firefox.
+4.	Run STS.
+5.	Click File -> Open File from File System.
+6.	Click 'Directory' and finf the project.
+7.	Click Finish.
+8.	To run click Alt+Shift+X -> J.
+9.	Choose in Matching items: 'Aplication - hello' and click 'OK'.
+10.	The app is running now.
+
+II.	How to work:
+
+1.	Type http://localhost:8080/ in Firefox.
+2.	You will be redirected to http://localhost:8080/login
+3.	Type user: 'ben' and password: 'benspassword'.
+4.	Other users and passwords are in app/src/main/resources/test-server.ldif
+5.	You will see 'Welcome to the home page!'.
+6.	To see the company list type in browser: http://localhost:8080/companyList
+7.	To see the material list type in browser: http://localhost:8080/materialList
+8.	To see company by ID type http://localhost:8080/company?id=ID where ID is a number.
+9.	To see material by ID type http://localhost:8080/materialList?id=ID where ID is a number.
+10.	To see material by company id type http://localhost:8080/materialList?companyID=ID where ID is a number.
+11.	To see material details type http://localhost:8080/materialDetails?id=ID where ID is a number.
+12.	To insert new company open RESTClient and do:
+		- Method	-> POST,
+		- URL		-> http://localhost:8080/companyList,
+		- Body		-> {"companyName":"yourCompanyName","companyID":yourCompanyID}
+13.	To update a company open RESTClient ad do:
+		- Method	-> PUT,
+		- URL		-> http://localhost:8080/companyList,
+		- Body		-> {"companyName":"yourNewCompanyName","companyID":yourCompanyID}
+14.	To delete a company open RESTClient ad do:
+		- Method	-> DELETE,
+		- URL		-> http://localhost:8080/companyList,
+		- Body		-> companyID
+15.	To insert new material open RESTClient and do:
+		- Method	-> POST,
+		- URL		-> http://localhost:8080/materialList,
+		- Body		-> {"name":"yourMaterialName",
+						"id":yourId,
+						"materialID":yourMaterialId,
+						"description":"yourDescription",
+						"notes":"yourNotes",
+						"supplier":"yourSupplier",
+						"price":yourPrice,
+						"currency":"yourCurrency"}
+16.	 To update new material open RESTClient and do:
+		- Method	-> PUT,
+		- URL		-> http://localhost:8080/materialList,
+		- Body		-> {"name":"yourMaterialName",
+						"id":yourId,
+						"materialID":yourMaterialId,
+						"description":"yourDescription",
+						"notes":"yourNotes",
+						"supplier":"yourSupplier",
+						"price":yourPrice,
+						"currency":"yourCurrency"}
+17.	To delete a material open RESTClient ad do:
+		- Method	-> DELETE,
+		- URL		-> http://localhost:8080/companyList,
+		- Body		-> idOfMaterial
